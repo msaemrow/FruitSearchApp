@@ -29,18 +29,23 @@ input {
 }
 
 ul {
-  /* TODO */
+  border-top: 1px solid #999;
+  padding: 15px 10px;
 }
 ul.has-suggestions {
   /* TODO */
 }
 ul li {
-  /* TODO */
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
 }
-ul li:hover {
+.result:hover {
   /* TODO */
+  background-color: gray;
 }
 
 input {
    /* TODO */
 }
+
