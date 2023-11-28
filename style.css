@@ -1,5 +1,5 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 :focus {
@@ -7,7 +7,10 @@
 }
 
 body {
-  /* TODO */
+  background: linear-gradient(90deg, red, rgb(205, 0, 205));
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
 input {
@@ -15,37 +18,44 @@ input {
 }
 
 .search-container {
- /* TODO */
-}
-.search-container input,
-.search-container .suggestions {
-  /* TODO */
-}
-.search-container input {
- /* TODO */
-}
-.search-container .suggestions {
-   /* TODO */
+  width: 600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-ul {
-  border-top: 1px solid #999;
-  padding: 15px 10px;
+.suggestions ul {
+  padding: 0px 10px;
+  margin-top: 0;
+  
 }
-ul.has-suggestions {
+
+.suggestions {
   /* TODO */
+  margin-top: 0;
+  max-height: 400px;
+  overflow-y: scroll;
+  width: 300px;
 }
-ul li {
+
+.suggestions ul li {
   list-style: none;
-  border-radius: 3px;
-  padding: 15px 10px;
+  padding: 10px 10px;
+  width: 200px;
+  margin-top: 0;
 }
 .result:hover {
-  /* TODO */
-  background-color: gray;
+  background-color: aliceblue;
+  font-weight: 700;
+  font-size: larger;
+  border-radius: 5px;
 }
 
 input {
-   /* TODO */
+   border-radius: 5px;
+   height: 30px;
+   width: 300px;
 }
 
