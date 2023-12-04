@@ -83,9 +83,3 @@ input{
     padding-top: 35px;
   }
 }
-
-@media (max-width: 401px){
-  .search-container {
-    width: 300px;
-  }
-}
