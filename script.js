@@ -8,14 +8,8 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 //If items contains it is added to the results array.
 
 function search() {
-	let results = [];
 	let searchStr = input.value.toLowerCase();
-	for (let name of fruit){
-		if(name.toLowerCase().includes(searchStr)){
-			results.push(name);
-		} 
-	}
-	return results;
+	return fruit.filter(fruit => fruit.toLowerCase().includes(searchStr))
 }
 
 //function that passes the search function into the showSuggestions functions so it can be easily called in event handler
@@ -30,17 +24,18 @@ function searchHandler(e) {
 //After loop is completed, appends the UL to the suggestions DIV container (from query selector)
 function showSuggestions(results, inputVal) {
 	suggestions.innerHTML = '';
+	//Need this if statement otherwise the list doesn't clear if you completely delete the input value manually
 	if(inputVal === '' || results.length === 0){
 		return;
 	} else{
-	const searchList = document.createElement('ul');
-	for (let fruit of results){
-		const searchResult = document.createElement('li');
-		searchResult.innerText = fruit;
-		searchResult.classList.add('result');
-		searchList.appendChild(searchResult);
-	}
-	suggestions.appendChild(searchList);
+		const searchList = document.createElement('ul');
+		for (let fruit of results){
+			const searchResult = document.createElement('li');
+			searchResult.innerText = fruit;
+			searchResult.classList.add('result');
+			searchList.appendChild(searchResult);
+		}
+		suggestions.appendChild(searchList);
 	}
 }
 
@@ -56,5 +51,5 @@ function useSuggestion(e) {
 
 //event listener that is called upon the end of every key stroke for real time updates of list
 input.addEventListener('keyup', searchHandler);
-//event handler that adds the search item to the search bar when it is clicked
+//event lisener that adds the search item to the search bar when it is clicked
 suggestions.addEventListener('click', useSuggestion);
