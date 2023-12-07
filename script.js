@@ -14,7 +14,8 @@ function search() {
 
 //function that passes the search function into the showSuggestions functions so it can be easily called in event handler
 function searchHandler(e) {
-		showSuggestions(search(),input.value);
+		const results = search();
+		showSuggestions(results,input.value);
 }
 
 //params- results (array), input value (from query selector)
