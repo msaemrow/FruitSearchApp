@@ -9,11 +9,15 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0px;
 }
 
 h1{
-  font-size: 4rem;
+  position: absolute;
+  top: 80px;
+  left: center;
+  font-size: 5rem;
   margin-bottom: 0;
   background-image: linear-gradient(90deg, rgb(255, 251, 1), aqua);
   -webkit-background-clip: text;
@@ -22,12 +26,16 @@ h1{
 
 body {
   background: linear-gradient(90deg, red, rgb(205, 0, 205));
+  height: 100vh;
 }
 
 .search-container {
+  position: absolute;
+  top: center;
+  left: center;
   width: 600px;
   background: white;
-  margin: 50px auto 200px auto;
+  margin: auto;
   border-radius: 5px;
 }
 
@@ -51,11 +59,17 @@ input{
   color: slategray;
 }
 
+.suggestions{
+  position: absolute;
+  background-color: antiquewhite;
+  width: 100%;
+}
+
 
 .suggestions ul {
   padding: 15px 10px;
   border-top: 1px solid black;
-  max-height: 275px;
+  max-height: 240px;
   overflow-y:scroll;  
 }
 
